@@ -20,6 +20,7 @@ body {
     justify-content: center;
     gap: 10px;
     margin-bottom: 20px;
+    font-size: 2rem;
 }
 
 #heading img {
@@ -84,4 +85,51 @@ h4 {
     justify-content: center;
     display: flex;
     padding: 1rem;
+}
+
+#searchbar {
+    padding: 12px 25px;
+    margin-bottom: 0;
+    font-size: 1rem;
+    background-color: #edeef0;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    width: 400px;
+}
+
+#searchcontainer {
+    position: relative; /* <-- this is needed */
+    display: flex;
+    flex-direction: column; /* Makes results appear below input */
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+#search-results {
+  position: absolute;
+  top: 100%; /* Show just below input */
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+
+  border-radius: 0 0 10px 10px;
+  max-height: 250px;
+  overflow-y: auto;
+  z-index: 1000;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+#search-results li {
+  padding: 12px 16px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+
+#search-results li:hover {
+  background-color: #f5f5f5;
 }
